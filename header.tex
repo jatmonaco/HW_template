@@ -1,26 +1,84 @@
 %% Packages
-\usepackage{cite}
-\usepackage{cancel}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{graphicx}
+% Formatting 
+\usepackage[margin=2cm,headheight=35pt]{geometry}
 \usepackage{textcomp}
+\usepackage{fancyvrb}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
 \usepackage{listings}
 \usepackage{enumitem}
-\usepackage{wrapfig}
-\usepackage{siunitx}
-\usepackage[margin=2cm,headheight=35pt]{geometry}
 \usepackage{collectbox}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[skip=20pt, indent=0pt]{parskip}
+\usepackage[skip=0pt, indent=0pt]{parskip}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{tikz}
 \usepackage{tcolorbox}
+\usepackage{algorithmic}
+
+% Math
+\usepackage{cancel}
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\usepackage{mathtools}
 \usepackage{witharrows}
+
+% Thrm
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em}
+
+% Definition box
+\theoremstyle{definition}
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    notebraces={}{},
+    headpunct={},
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=ForestGreen, backgroundcolor=ForestGreen!8,
+            nobreak=false
+        }
+]{thmgreen2box}
+\declaretheorem[style=thmgreen2box, name=Definition, numbered=no]{definition}
+
+% Example box
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    notebraces={}{},
+    headpunct={},
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+            nobreak=false
+        }
+]{thmbluebox}
+\declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
+
+% Theorem box
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    notebraces={}{},
+    headpunct={},
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=RawSienna, backgroundcolor=RawSienna!8,
+            nobreak=false
+        }
+]{thmred2box}
+\declaretheorem[style=thmred2box, name=Theorem, numbered=no]{theorem}
+
+
+% Citation and linking
+\usepackage{hyperref}
+\usepackage{cite}
 \usepackage{cleveref}
+
+% Misc
 \usepackage{lipsum}
 
 %% Exponentials  
