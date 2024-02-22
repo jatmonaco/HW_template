@@ -72,6 +72,17 @@
 ]{thmred2box}
 \declaretheorem[style=thmred2box, name=Theorem, numbered=no]{theorem}
 
+% Remark Box 
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{TealBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=TealBlue,
+            nobreak=false
+        }
+]{thmblueline}
+\declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
 
 % Citation and linking
 \usepackage{hyperref}
