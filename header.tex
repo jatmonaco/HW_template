@@ -21,13 +21,53 @@
 \usepackage[autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
 \usepackage{pdfpages}
+\usepackage{titling}
 
+% asymptote
+\usepackage{asymptote}
+\usepackage{asypictureB}
 
 % Math
 \usepackage{cancel}
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathtools}
 \usepackage{witharrows}
+
+% title set up 
+% stolen from: https://tex.stackexchange.com/questions/328094/easy-way-to-change-title-author-styles
+\pretitle{% add some rules
+  \vspace{-2.5cm}  
+  \begin{center}
+    \Huge\bfseries
+}%, make the fonts bigger, make the title (only) bold
+\posttitle{%
+  \end{center}%
+%   \noindent\vrule height 2.5pt width \textwidth
+  \vskip .75em plus .25em minus .25em% increase the vertical spacing a bit, make this particular glue stretchier
+}
+\preauthor{%
+  \begin{center}
+    \vspace{-0.25cm}  
+    \large % \lineskip 0.75em%
+    % \vrule height 0.4pt width .25\textwidth\par
+    \begin{tabular}[t]{@{}l@{}}%
+}
+\postauthor{%
+    \end{tabular}
+    \vskip -.5em
+    \par
+    % \vrule height 0.4pt width .25\textwidth\par
+  \end{center}%
+}
+\predate{%
+  \begin{center}
+    \vspace{-.25cm}  
+    \large
+}
+\postdate{%
+  \end{center}%
+  \vspace{-1cm}
+}
 
 % Thrm
 \usepackage{thmtools}
