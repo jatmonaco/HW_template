@@ -3,14 +3,14 @@
 \usepackage[margin=2cm,headheight=35pt]{geometry}
 \usepackage{textcomp}
 \usepackage{fancyvrb}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr}   % Fancy headers
 \usepackage{listings}
 \usepackage{enumitem}
 \usepackage{collectbox}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[skip=12pt, indent=0pt]{parskip}
+\usepackage[skip=10pt, indent=0pt]{parskip}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{siunitx}
@@ -22,6 +22,11 @@
 \MakeOuterQuote{"}
 \usepackage{pdfpages}
 \usepackage{titling}
+\usepackage{minted}
+\usepackage{bibunits}
+\usepackage{authblk}          % Author affiliations. Configs below. 
+\setlength{\affilsep}{0em}
+\renewcommand\Affilfont{\small}
 
 % asymptote
 \usepackage{asymptote}
@@ -66,7 +71,7 @@
 }
 \postdate{%
   \end{center}%
-  \vspace{-1cm}
+  % \vspace{-1cm}
 }
 
 % Thrm
@@ -150,7 +155,7 @@
 
 %% Formatting
 % \setlength{\parindent}{0pt}
-\renewcommand{\thesubsection}{\alph{subsection}.}
+% \renewcommand{\thesubsection}{\alph{subsection}.}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C,CO]{\thepage}
