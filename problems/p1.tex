@@ -1,23 +1,41 @@
-
 \section{Problem 1}
-%
+% --- Wrap figure environment --- % 
 \begin{wrapfigure}{r}{0.4\textwidth}
     \begin{center}
-        \includegraphics[width=0.8\linewidth]{figs/p2pa.png}
+        \includegraphics[width=0.8\linewidth]{example-image}
     \end{center}
     \caption{Wrapfigure environment}
 \end{wrapfigure}
-%
+% Placeholder text with citations 
 \lipsum[26] \cite{fouhey_2010MachineLearning_2018}.
 \lipsum[55]
-%
+% --- Math environment with cancel and annotation --- % 
+\[\begin{WithArrows}
+    \langle (S_n - Y)^2 \rangle & = \langle S_n^2 + Y^2 - 2S_n Y \rangle \Arrow{Expectation operator \\ is linear} \\ 
+    & = \langle S_n^2 \rangle + \langle Y^2 \rangle - 2 \langle S_n Y \rangle \\ 
+    & \xrightarrow[]{n \rightarrow \infty} \underbrace{\langle \left( \sum\limits_{i=1}^{n}a_i X_i  \right)^2 \rangle}_{\text{cross terms are zero}} + \sum\limits_{i=1}^{n} \alpha_i^2 - 2 \langle \sum\limits_{i=1}^{n} \alpha_i X_i Y \rangle \\ 
+    & = \langle \sum\limits_{i=1}^{n} \alpha_i^2 X_i^2 \rangle + \sum\limits_{i=1}^{n} \alpha_i^2 - 2 \langle \sum\limits_{i=1}^{n} \alpha_i X_i Y \rangle \Arrow{Only \(X_i\) and \(Y\) \\ are non-deterministic} \\ 
+    & = \sum\limits_{i=1}^{n} \alpha_i^2 \underbrace{\cancelto{1}{\langle  X_i^2 \rangle}}_{\var(X_i) = 1} + \sum\limits_{i=1}^{n} \alpha_i^2 - 2 \sum\limits_{i=1}^{\infty} \alpha_i \underbrace{\langle Y X_i \rangle}_{\alpha_i} \\ 
+    & = 2\sum\limits_{i=1}^{n} \alpha_i^2 - 2 \sum\limits_{i=1}^{n} \alpha_i^2 \\ 
+    & = 0
+\end{WithArrows}\]
+% 
 \subsection{Part A}
+% --- Remark environment --- % 
 \begin{remark}[test]
     \lipsum[55]
 \end{remark}
+% --- Align math environment --- % 
+\begin{align*}
+    f_Y(y) = 
+     \begin{cases}
+         \frac{1}{\sqrt{\pi \left( \sqrt{2}y+1 \right)}}\e^{-\frac{1}{2}\left( \sqrt{2}y+1 \right)} &  -\frac{1}{\sqrt{2}} \leq y < \infty \\ 
+        0     & \mathrm{otherwise}
+    \end{cases}
+\end{align*}
 %
 \lipsum[23]
-%
+% --- Definition environment --- %
 \begin{definition}[test]
     \lipsum[44]
 \end{definition}
@@ -25,23 +43,29 @@
 \lipsum[32]
 %
 \subsection{Part B}
-%
+% --- Figure environment --- %
 \begin{figure}[h!tbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/p2pa.png}
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{example-image-a}
+        \subcaption{Example A}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{example-image-a}
+        \subcaption{Example B}
+    \end{subfigure}
     \caption{Figure environment \cite{galvez_MachinelearningDataSet_2019}.}
     \label{fig:p2_a}
 \end{figure}
-%
+% --- Theorem  environment --- %
 \begin{theorem}[test]
     \lipsum[2]
 \end{theorem}
 %
 \lipsum[34]
-%
+% --- Example environment --- %
 \begin{eg}[test]
     \lipsum[36]
 \end{eg}
-%
-\subsection{Code Example}
-\inputminted{python3}{code/code_ex.py}

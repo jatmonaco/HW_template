@@ -2,7 +2,7 @@
 \documentclass[12pt]{scrartcl}
 \input{header.tex}
 \hypersetup{pdftitle={Monaco HWX ASEN XXXX}}
-% \usepackage[scale=3,pos={0.75\paperwidth, 0.85\paperheight},color={[rgb]{1, 0.8, 0.8}}]{draftwatermark}
+% \usepackage[scale=3,pos={0.75\paperwidth, 0.85\paperheight},color={[rgb]{1, 0.8, 0.8}}]{draftwatermark} % draft watermark 
 
 %% --- Title and Authors --- %% 
 \title{HW X\\\large ASEN XXXX Fall '24}
@@ -23,8 +23,13 @@
 \maketitle
 \tableofcontents
 \newpage
-%
+% --- Including another .tex file --- % 
 \input{problems/p1.tex}
+%
+% --- Including external code --- % 
+\appendix
+\section{Code Example}
+\inputminted{python3}{code/code_ex.py}
 %
 % --- References --- % 
 \bibliography{biblio.bib}
