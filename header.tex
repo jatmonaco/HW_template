@@ -1,65 +1,47 @@
-% --- Formatting document --- %
-% \usepackage{collectbox}               % better boxes
-% \usepackage{textcomp}                 % allows additional fonts for compatability 
-\usepackage[letterpaper,margin=0.5in, top=2cm, bottom=2cm]{geometry}   % Controls margins 
-\setparsizes{0pt}{8pt}{0pt plus 1fil}   % sets paragraph spacing 
-\usepackage{enumitem}                   % better enumeration environments
-\usepackage[dvipsnames]{xcolor}         % better colors 
-\usepackage{caption}                    % custom captions
-\usepackage{subcaption}                 % subcaptions and subfigures 
-\usepackage{graphicx}                   % better float managment
-\usepackage{wrapfig}                    % wrapfigure environment 
-\usepackage{tcolorbox}                  % better colorboxes
-\usepackage[english]{babel}             % language support 
-\usepackage[autostyle, english = american]{csquotes}  % quote control 
-% \MakeOuterQuote{"}
-\usepackage{pdfpages}                   % include multi-page pdfs 
-\usepackage{titling}                    % better title creation 
-\usepackage{bibunits}                   % multiple bibs in the same doc 
-\usepackage{authblk}                    % Author affiliations. Configs below. 
+%% Packages
+% Formatting 
+\usepackage[letterpaper, margin=0.5in, top=2cm, bottom=2cm]{geometry}
+\setparsizes{0pt}{8pt}{0pt plus 1fil}
+\usepackage{textcomp}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{collectbox}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{algorithmic}
+\usepackage[english]{babel}
+\usepackage{pdfpages}
+\usepackage{titling}
+\usepackage{minted}
+\definecolor{bg}{rgb}{.9, .9, .9}
+\setminted{style=emacs,  breaklines=true,bgcolor=bg,  linenos=true} 
+\usepackage{bibunits}
+\usepackage{authblk}          % Author affiliations. Configs below. 
 \setlength{\affilsep}{0em}
 \renewcommand\Affilfont{\small}
-\usepackage[headsepline]{scrlayer-scrpage}  % header 
-\usepackage{lipsum}                     % test text
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{booktabs}
 
-% --- Code display --- % 
-% \usepackage{fancyvrb}                 % better verbatem. Superceded by minted? 
-% \usepackage{listings}                 % inline code. Superceded by minted?
-% \usepackage{algorithmic}              % float wrapper for algorithms
-\usepackage[outputdir=out_files]{minted} % better code display  
-\definecolor{bg}{rgb}{.9, .9, .9}       
-\usemintedstyle{emacs,bgcolor=bg, breaklines=true, linenos=true}
+% asymptote
+\usepackage{asymptote}
+\usepackage{asypictureB}
 
-
-% --- Figure creation --- %
-% \usepackage{asymptote}                  % asymptote 
-% \usepackage{asypictureB}                % asy helper?
-\usepackage{tikz}                         % drawing graphics 
-
-
-% --- Math --- %
-\usepackage{siunitx}                    % units in math mode
-\usepackage{cancel}                     % cancel out terms in math mode 
+% Math
+\usepackage{cancel}
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathtools}
-\usepackage{witharrows}                 % allows arrows from one equation to another for explaination
-% Exponentials
-\newcommand{\e}[0]{\mathrm{e}}                      % math e 
-\newcommand{\expnum}[2]{{#1}\mathrm{e}{#2}}         % exponential number
-% Vector notation
-\newcommand{\dbar}[1]{\overline{\overline{#1}}}     % double overbar
-\newcommand{\var}{\mathrm{Var}}                     % variance
-\newcommand{\Dbar}[1]{\dot{\bar{#1}}}               % double bar
-\newcommand{\Ddbar}[1]{\ddot{\bar{#1}}}             % dot over bar
-\newcommand{\Dtilde}[1]{\dot{\tilde{#1}}}           % dot over tilde
+\usepackage{witharrows}
 
-
-% ---- Citation and linking ---- % 
-\usepackage{hyperref}
-\usepackage{cite}
-\usepackage{cleveref}
-
-% --- Title configuration --- % 
+% title set up 
 % stolen from: https://tex.stackexchange.com/questions/328094/easy-way-to-change-title-author-styles
 \pretitle{% add some rules
   \vspace{-2.5cm}  
@@ -95,8 +77,8 @@
   % \vspace{-1cm}
 }
 
-%  --- Theorem boxes --- %
-\usepackage{thmtools} 
+% Thrm
+\usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
 
@@ -155,4 +137,22 @@
 ]{thmblueline}
 \declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
 
+% Citation and linking
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{cleveref}
+
+% Misc
+\usepackage{lipsum}
+
+%% Exponentials
+\newcommand{\e}[0]{\mathrm{e}}                      % math e 
+\newcommand{\expnum}[2]{{#1}\mathrm{e}{#2}}         % exponential number
+
+%% Vector notation
+\newcommand{\dbar}[1]{\overline{\overline{#1}}}     % double overbar
+\newcommand{\var}{\mathrm{Var}}                     % variance
+\newcommand{\Dbar}[1]{\dot{\bar{#1}}}               % double bar
+\newcommand{\Ddbar}[1]{\ddot{\bar{#1}}}             % dot over bar
+\newcommand{\Dtilde}[1]{\dot{\tilde{#1}}}           % dot over tilde
 
